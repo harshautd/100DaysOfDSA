@@ -1,8 +1,8 @@
+| Notation       | Definition                                                                 | Purpose                                                                 | Example (f(n) and g(n))           | Diagram Description                         |
+|----------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------|---------------------------------------------|
+| **Big-O**      | f(n) ≤ c * g(n) for large n, for some constant c > 0.                      | Describes the upper bound of a function, showing the worst-case growth. | f(n) = 3n² + 2n + 1, g(n) = n³    | f(n) is below or equal to g(n) asymptotically. |
+| **Small-o**    | f(n) < c * g(n) for large n, for all constants c > 0.                      | Shows a strict upper bound, indicating that f(n) grows slower than g(n).| f(n) = 3n² + 2n + 1, g(n) = n³    | f(n) is strictly below g(n) asymptotically. |
+| **Big-Omega**  | f(n) ≥ c * g(n) for large n, for some constant c > 0.                      | Describes the lower bound of a function, showing the minimum growth rate. | f(n) = 3n² + 2n + 1, g(n) = n     | f(n) is above or equal to g(n) asymptotically. |
+| **Small-omega**| f(n) > c * g(n) for large n, for all constants c > 0.                      | Shows a strict lower bound, indicating that f(n) grows faster than g(n). | f(n) = 3n² + 2n + 1, g(n) = n     | f(n) is strictly above g(n) asymptotically. |
+| **Theta**      | c₁ * g(n) ≤ f(n) ≤ c₂ * g(n) for large n, for constants c₁, c₂ > 0.       | Describes the tight bound, showing that f(n) grows at the same rate as g(n). | f(n) = 3n² + 2n + 1, g(n) = n²    | f(n) grows tightly around g(n) asymptotically. |
 
-| Notation     | Definition                                                                 | Example (f(n) and g(n))           | Diagram Description                         |
-|--------------|-----------------------------------------------------------------------------|------------------------------------|---------------------------------------------|
-| **Big-O**    | f(n) ≤ c * g(n) for large n, for some constant c > 0.                      | f(n) = 3n² + 2n + 1, g(n) = n³    | f(n) is below or equal to g(n) asymptotically. |
-| **Small-o**  | f(n) < c * g(n) for large n, for all constants c > 0.                      | f(n) = 3n² + 2n + 1, g(n) = n³    | f(n) is strictly below g(n) asymptotically. |
-| **Big-Omega**| f(n) ≥ c * g(n) for large n, for some constant c > 0.                      | f(n) = 3n² + 2n + 1, g(n) = n     | f(n) is above or equal to g(n) asymptotically. |
-| **Small-omega**| f(n) > c * g(n) for large n, for all constants c > 0.                   | f(n) = 3n² + 2n + 1, g(n) = n     | f(n) is strictly above g(n) asymptotically. |
-| **Theta**    | c₁ * g(n) ≤ f(n) ≤ c₂ * g(n) for large n, for constants c₁, c₂ > 0.       | f(n) = 3n² + 2n + 1, g(n) = n²    | f(n) grows tightly around g(n) asymptotically. |
