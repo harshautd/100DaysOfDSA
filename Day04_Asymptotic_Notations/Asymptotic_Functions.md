@@ -47,65 +47,49 @@ O(1) ≫ O(1 / log n) ≫ O(1 / n) ≫ O(1 / n^2) ≫ O(1 / 2^n) ≫ O(1 / n!) �
 
 ## **1. Limit Approach**
 To compare `log(n)` and `n^(1/2)`, we analyze their growth rates as `n` increases.
-
 We take the limit of their ratio:
 
-```math
-\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}}
-```
+$$\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}}$$
 
 Using L'Hôpital's Rule, differentiate the numerator and denominator:
 
-```math
-\frac{d}{dn} (\log n) = \frac{1}{n}, \quad \frac{d}{dn} (n^{1/2}) = \frac{1}{2 \sqrt{n}}
-```
+$$\frac{d}{dn} (\log n) = \frac{1}{n}, \quad \frac{d}{dn} (n^{1/2}) = \frac{1}{2 \sqrt{n}}$$
 
 Applying L'Hôpital's Rule:
 
-```math
-\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}} = \lim_{{n \to \infty}} \frac{1/n}{1/2\sqrt{n}} = \lim_{{n \to \infty}} \frac{2\sqrt{n}}{n} = \lim_{{n \to \infty}} \frac{2}{\sqrt{n}}
-```
+$$\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}} = \lim_{{n \to \infty}} \frac{1/n}{1/2\sqrt{n}} = \lim_{{n \to \infty}} \frac{2\sqrt{n}}{n} = \lim_{{n \to \infty}} \frac{2}{\sqrt{n}}$$
 
-Since `2 / sqrt(n) → 0` as `n → ∞`, we conclude:
+Since $2 / \sqrt{n} \to 0$ as $n \to \infty$, we conclude:
 
-```math
-\log n \ll n^{1/2}
-```
+$$\log n \ll n^{1/2}$$
 
 which means `log(n)` grows much more slowly than `n^(1/2)`.
 
----
-
 ## **2. Asymptotic Notation**
-```math
-\log n = O(n^{1/2})
-```
+
+$$\log n = O(n^{1/2})$$
 
 More precisely,
-```math
-\log n = o(n^{1/2})
-```
-meaning `log(n)` is asymptotically smaller than `n^(1/2)`.
 
----
+$$\log n = o(n^{1/2})$$
+
+meaning `log(n)` is asymptotically smaller than `n^(1/2)`.
 
 ## **3. Numerical Check**
 For small values of `n`:
 
-| `n`  | `log(n)` (base `e`) | `n^(1/2)` |
-|------|-----------------|---------|
-| 10   | 2.3             | 3.16    |
-| 100  | 4.6             | 10      |
-| 1000 | 6.9             | 31.6    |
-| 10,000 | 9.2           | 100     |
+| `n`     | `log(n)` (base `e`) | `n^(1/2)` |
+|---------|---------------------|-----------|
+| 10      | 2.3                 | 3.16      |
+| 100     | 4.6                 | 10        |
+| 1000    | 6.9                 | 31.6      |
+| 10,000  | 9.2                 | 100       |
 
 Clearly, `n^(1/2)` grows much faster than `log(n)`.
-
----
 
 ## **Conclusion**
 - `n^(1/2)` grows much faster than `log(n)`.
 - For large `n`, `log(n)` is negligible compared to `n^(1/2)`.
-- In algorithmic complexity, an `O(n)` algorithm is significantly slower than an `O(log n)` algorithm.
+- In algorithmic complexity, an `O(sqrt(n))` algorithm is significantly slower than an `O(log n)` algorithm.
 
 🚀 **Big-O Notation Matters!**
