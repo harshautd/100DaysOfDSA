@@ -49,29 +49,29 @@ O(1) ≫ O(1 / log n) ≫ O(1 / n) ≫ O(1 / n^2) ≫ O(1 / 2^n) ≫ O(1 / n!) �
 To compare `log(n)` and `n^(1/2)`, we analyze their growth rates as `n` increases.
 We take the limit of their ratio:
 
-$$\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}}$$
+$\lim_{n \rightarrow \infty} \frac{\log n}{n^{1/2}}$
 
 Using L'Hôpital's Rule, differentiate the numerator and denominator:
 
-$$\frac{d}{dn} (\log n) = \frac{1}{n}, \quad \frac{d}{dn} (n^{1/2}) = \frac{1}{2 \sqrt{n}}$$
+$\frac{d}{dn} (\log n) = \frac{1}{n}$, $\frac{d}{dn} (n^{1/2}) = \frac{1}{2 \cdot n^{1/2}}$
 
 Applying L'Hôpital's Rule:
 
-$$\lim_{{n \to \infty}} \frac{\log n}{n^{1/2}} = \lim_{{n \to \infty}} \frac{1/n}{1/2\sqrt{n}} = \lim_{{n \to \infty}} \frac{2\sqrt{n}}{n} = \lim_{{n \to \infty}} \frac{2}{\sqrt{n}}$$
+$\lim_{n \rightarrow \infty} \frac{\log n}{n^{1/2}} = \lim_{n \rightarrow \infty} \frac{1/n}{1/(2 \cdot n^{1/2})} = \lim_{n \rightarrow \infty} \frac{2 \cdot n^{1/2}}{n} = \lim_{n \rightarrow \infty} \frac{2}{n^{1/2}}$
 
-Since $2 / \sqrt{n} \to 0$ as $n \to \infty$, we conclude:
+Since $\frac{2}{n^{1/2}} \rightarrow 0$ as $n \rightarrow \infty$, we conclude:
 
-$$\log n \ll n^{1/2}$$
+$\log n \ll n^{1/2}$
 
 which means `log(n)` grows much more slowly than `n^(1/2)`.
 
 ## **2. Asymptotic Notation**
 
-$$\log n = O(n^{1/2})$$
+$\log n = O(n^{1/2})$
 
 More precisely,
 
-$$\log n = o(n^{1/2})$$
+$\log n = o(n^{1/2})$
 
 meaning `log(n)` is asymptotically smaller than `n^(1/2)`.
 
