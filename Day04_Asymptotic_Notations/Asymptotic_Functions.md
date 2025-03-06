@@ -95,3 +95,68 @@ Clearly, `n^(1/2)` grows much faster than `log(n)`.
 - In algorithmic complexity, an `O(sqrt(n))` algorithm is significantly slower than an `O(log n)` algorithm.
 
 🚀 **Big-O Notation Matters!**
+
+# Comparing log₂n and log₃n Growth Rates
+
+To compare log₂n and log₃n, let's analyze their growth rates.
+
+## 1. Change of Base Formula
+
+Using the logarithm base change formula:
+```
+log_a(n) = log_b(n) / log_b(a)
+```
+
+We can express log₃n in terms of log₂n:
+```
+log₃n = log₂n / log₂(3)
+```
+
+Since log₂(3) ≈ 1.585 > 1, we conclude:
+```
+log₃n < log₂n
+```
+
+for all n > 1.
+
+## 2. Limit Approach
+
+We take the limit of their ratio:
+```
+lim(n→∞) [log₂n / log₃n]
+```
+
+Substituting log₃n = log₂n / log₂(3):
+```
+lim(n→∞) [log₂n / (log₂n / log₂(3))] = log₂(3) ≈ 1.585
+```
+
+Since this is a constant, we conclude:
+```
+log₂n = Θ(log₃n)
+```
+
+which means they grow at the **same rate asymptotically**.
+
+## 3. Asymptotic Notation
+
+Since the ratio converges to a constant, we write:
+```
+log₂n = Θ(log₃n)
+```
+
+which implies that both functions grow at the same rate, up to a constant factor.
+
+## 4. Numerical Comparison
+
+```
+| n  | log₂n | log₃n |
+|----|-------|-------|
+| 2  | 1     | 0.631 |
+| 4  | 2     | 1.262 |
+| 8  | 3     | 1.893 |
+| 16 | 4     | 2.524 |
+| 32 | 5     | 3.155 |
+```
+
+Clearly, log₂n is always larger, but they both grow **slowly and proportionally**.
