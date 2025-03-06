@@ -48,3 +48,14 @@ O(1) ≫ O(1 / log n) ≫ O(1 / n) ≫ O(1 / n²) ≫ O(1 / 2ⁿ) ≫ O(1 / n!) 
 These functions often appear in probability distributions, physics laws, and optimization problems where the impact of an increase in `n` rapidly diminishes.
 
 ---
+
+## **Comparison of Different Growth Rates**
+| Type        | Notation | Growth Behavior |
+|------------|---------|----------------|
+| Constant   | `O(1)` | Stays the same |
+| Logarithmic | `O(log n)` | Grows very slowly |
+| Linear     | `O(n)` | Grows steadily |
+| Quadratic  | `O(n²)` | Grows faster |
+| Exponential | `O(2ⁿ)` | Grows extremely fast |
+| **Inverse Polynomial** | `O(1 / n)` | Slowly decreases |
+| **Exponential Decay** | `O(1 / 2ⁿ)` | Rapidly decreases |
