@@ -160,3 +160,5 @@ which implies that both functions grow at the same rate, up to a constant factor
 ```
 
 Clearly, log₂n is always larger, but they both grow **slowly and proportionally**.
+
+## If the leading terms of two functions differ only by a constant factor, then Big-O (O), Big-Omega (Ω), and Theta (Θ) notations can be applied.
